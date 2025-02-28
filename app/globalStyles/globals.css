@@ -143,6 +143,9 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #70f;
   left: 125px;
   top: 45%;
+  background-image: url('/img/plus-big.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
   z-index: 1;
 }
 
@@ -195,6 +198,21 @@ body::-webkit-scrollbar-thumb:hover {
   transition: background-color 0.2s ease-in-out;
 }
 
+.counter button:first-child:before {
+  -webkit-mask: url(/img/minus.svg) no-repeat 50% 50%;
+  mask: url(/img/minus.svg) no-repeat 50% 50%;
+}
+
+.counter button:last-child:before {
+  -webkit-mask: url(/img/plus.svg) no-repeat 50% 50%;
+  mask: url(/img/plus.svg) no-repeat 50% 50%;
+}
+
+.counter button:hover::before {
+  transition: background-color 0.2s ease-in-out;
+  background-color: #9466ff;
+}
+
 .counter span {
   color: rgba(255, 255, 255, 0.9);
   font-size: 16px;
@@ -220,6 +238,10 @@ body::-webkit-scrollbar-thumb:hover {
 .not-empty-mobile-favorite {
   top: 12px;
   right: 25px;
+}
+
+.quick-modal-dots li.slick-active button {
+  background-image: url(/img/white-ellipse.svg) !important;
 }
 
 @media (max-width: 1460px) {
