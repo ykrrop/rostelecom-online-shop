@@ -9,6 +9,7 @@ import { addOverflowHiddenToBody } from '@/lib/utils/common'
 
 import { useLang } from '@/hooks/useLang'
 import { openMenu, openSearchModal } from '@/context/modals'
+import CartPopup from './CartPopup/CartPopup'
 
 export default function Header() {
   const { lang, translations } = useLang()
@@ -51,10 +52,7 @@ export default function Header() {
             />
           </li>
           <li className='header__links__item'>
-            <Link
-              className='header__links__item__btn header__links__item__btn--cart'
-              href='/cart'
-            />
+            <CartPopup />
           </li>
           <li className='header__links__item'>
             <Link
