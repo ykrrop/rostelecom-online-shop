@@ -3,17 +3,16 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useUnit } from 'effector-react'
+import { closeCatalogMenu } from '@/context/modals'
 import { useLang } from '@/hooks/useLang'
 import { useMenuAnimation } from '@/hooks/useMenuAnimation'
 import Header from './Header'
 import { removeOverflowHiddenFromBody } from '@/lib/utils/common'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
-
-import Accordion from '../Accordion/Accordion'
-import { $catalogMenuIsOpen } from '@/context/modals/state'
-import { closeCatalogMenu } from '@/context/modals'
 import CatalogMenuButton from './CatalogMenuButton'
 import CatalogMenuList from './CatalogMenuList'
+import Accordion from '../Accordion/Accordion'
+import { $catalogMenuIsOpen } from '@/context/modals/state'
 
 const CatalogMenu = () => {
   const catalogMenuIsOpen = useUnit($catalogMenuIsOpen)
