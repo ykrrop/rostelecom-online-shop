@@ -36,7 +36,7 @@ const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
                 {translations[lang].breadcrumbs.cart}
               </h3>
               <ul className='list-reset cart-popup__cart-list'>
-                <li className='cart-popup__cart-list__empty-cart'></li>
+                <li className='cart-popup__cart-list__empty-cart' />
               </ul>
               <div className='cart-popup__footer'>
                 <div className='cart-popup__footer__inner'>

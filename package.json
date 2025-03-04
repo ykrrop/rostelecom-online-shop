@@ -16,7 +16,10 @@
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-slick": "^0.30.3",
     "sass": "^1.85.1",
+    "sharp": "^0.33.5",
+    "slick-carousel": "^1.8.1",
     "swiper": "^11.2.4"
   },
   "devDependencies": {
@@ -24,6 +27,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/react-slick": "^0.23.13",
     "@typescript-eslint/eslint-plugin": "^8.24.1",
     "@typescript-eslint/parser": "^8.24.1",
     "eslint": "^9",

@@ -8,8 +8,11 @@ export const removeOverflowHiddenFromBody = () => {
 export const addOverflowHiddenToBody = (paddingRight = '') => {
   const body = document.querySelector('body') as HTMLBodyElement
   body.classList.add('overflow-hidden')
-  paddingRight && (body.style.paddingRight = paddingRight)
+  if (paddingRight) {
+    body.style.paddingRight = paddingRight
+  }
 }
+
 export const getWindowWidth = () => {
   const { innerWidth: windowWidth } =
     typeof window !== 'undefined' ? window : { innerWidth: 0 }

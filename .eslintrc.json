@@ -15,14 +15,6 @@
     ],
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/quotes": [
-      "error",
-      "single",
-      {
-        "avoidEscape": true,
-        "allowTemplateLiterals": true
-      }
-    ],
     "no-trailing-spaces": [2, { "skipBlankLines": false }],
     "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 1 }],
     "object-curly-spacing": ["error", "always"],
