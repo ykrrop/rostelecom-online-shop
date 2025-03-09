@@ -8,12 +8,13 @@ import { useLang } from '@/hooks/useLang'
 import img1 from '@/public/img/black-t.png'
 import img2 from '@/public/img/orange-t.png'
 import img3 from '@/public/img/violet-t.png'
-import styles from '@/styles/main-page/index.module.scss'
 import HeroSlide from './HeroSlide'
+import ProductSubtitle from '@/components/elements/ProductSubtitle/ProductSubtitle'
+import styles from '@/styles/main-page/index.module.scss'
+import stylesForAd from '@/styles/ad/index.module.scss'
 
 const Hero = () => {
   const { lang, translations } = useLang()
-  const descriptionSlicePosition = lang === 'ru' ? 5 : 2
 
   const slides = [
     {
@@ -40,7 +41,7 @@ const Hero = () => {
         {translations[lang].main_page.hero_hidden_title}
       </h1>
       <div className={`container ${styles.hero__container}`}>
-        <span className={styles.ad}>{translations[lang].common.ad}</span>
+        <span className={stylesForAd.ad}>{translations[lang].common.ad}</span>
         <Swiper
           className={styles.hero__slider}
           effect='coverflow'
@@ -65,21 +66,7 @@ const Hero = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className={styles.hero__subtitle}>
-          <div className={styles.hero__subtitle__rect} />
-          <span>
-            {translations[lang].main_page.hero_description.slice(
-              0,
-              descriptionSlicePosition
-            )}
-          </span>
-          <br />
-          <span>
-            {translations[lang].main_page.hero_description.slice(
-              descriptionSlicePosition
-            )}
-          </span>
-        </div>
+        <ProductSubtitle />
         <h2 className={styles.hero__title}>
           <span
             className={`${styles.hero__title__subtitle} ${
